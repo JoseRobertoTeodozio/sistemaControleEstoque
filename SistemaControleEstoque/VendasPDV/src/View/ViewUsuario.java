@@ -362,7 +362,6 @@ public class ViewUsuario extends javax.swing.JFrame {
             });
         }
     }
-
     // limpar formulario usuário
     private void limparCamos() {
         jtCodigo.setText("");
