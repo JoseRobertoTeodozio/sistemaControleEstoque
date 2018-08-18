@@ -17,8 +17,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
      * Creates new form ViewPrincipal
      */
     public ViewPrincipal() {
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
