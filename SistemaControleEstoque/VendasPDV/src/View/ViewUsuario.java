@@ -88,10 +88,21 @@ public class ViewUsuario extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Código", "Nome", "Login", "Senha"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jtableUsuario);
+        if (jtableUsuario.getColumnModel().getColumnCount() > 0) {
+            jtableUsuario.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
 
         jbCancelar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagens 16X16/cancelar.png"))); // NOI18N
