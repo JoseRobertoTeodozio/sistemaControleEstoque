@@ -83,27 +83,38 @@ public class ViewVenda extends javax.swing.JFrame {
 
         jLabel7.setText("Desconto");
 
+        jTextField2.setBackground(new java.awt.Color(204, 255, 204));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagens 16X16/add.png"))); // NOI18N
         jButton1.setText("Adicionar");
 
         jLabel8.setText("Valor Total");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Cód. Produto", "Nome Produto", "Quantidade", "Valor Unit.", "Valor Total"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagens 16X16/save.png"))); // NOI18N
         jButton2.setText("Salvar");
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagens 16X16/cancelar.png"))); // NOI18N
         jButton3.setText("Cancelar");
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagens 16X16/novo.png"))); // NOI18N
         jButton4.setText("Novo");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
